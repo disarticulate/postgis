@@ -2,6 +2,7 @@ import { GISTypeDetails, Subtype } from "./interfaces";
 import { GIS_SUBTYPE_NAME } from "./constants";
 
 export const getGISTypeDetails = (modifier: number): GISTypeDetails => {
+  console.log('modifier', modifier)
   const allZeroesHopefully = modifier >> 24;
   if (allZeroesHopefully !== 0) {
     throw new Error("Unsupported PostGIS modifier");
